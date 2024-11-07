@@ -258,7 +258,7 @@ end do
 <small>
 ```{.julia}
 do k2 = 1, k2_max
-
+   j=list_j(k2)
    if( j == 1 )then
     k3 = k2
    else
@@ -346,6 +346,6 @@ end do
 - Try to use libraries whenever possible.
 - Consider refactoring of the loops.
 - Check the memory access patterns
-   - on CPU adjacent locations of mememory need to be accessed close in time.
+   - on CPU adjacent locations of memory need to be accessed close in time.
    - on GPU adjacent locations of memory need to be accessed by adjacent threads.
 - Real life example of porting.

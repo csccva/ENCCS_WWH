@@ -37,7 +37,7 @@ lang:   en
 
 # GPU Platforms
 
-- *NVIDIA*, *AMD*, and *Intel* are the major conmpanies which design anf produce GPUs for HPC.
+- *NVIDIA*, *AMD*, and *Intel* are the major conmpanies which design and produce GPUs for HPC.
 - GPUs are provided with their own suite **CUDA**, **ROCm**, and respectively **oneAPI**.
     - optimization, differentiation (offering unique features tailored to their devices), vendor lock-in, licensing, and royalty fees
 - Cross-platform APIs such DirectCompute (only for Windows operating system), OpenCL, and SYCL.
@@ -101,8 +101,8 @@ GPU processing clusters (GPC)         Compute Engine       Xe-slice
 
 <small>
 
+- GPUs allocate a larger portion of transistors to data processing rather than data caching and flow control. 
 - GPUs are designed to execute thousands of threads simultaneously, making them highly parallel processors. In contrast, CPUs excel at executing a smaller number of threads in parallel.
-- GPUs allocate a larger portion of transistors to data processing rather than data caching and flow control. This prioritization of data processing enables GPUs to effectively handle parallel computations and hide memory access latencies through computation.
 - GPU producers provide comprehensive toolkits, libraries, and compilers for developing high-performance applications that leverage the parallel processing power of GPUs. Examples include CUDA (NVIDIA), ROCm (AMD), and oneAPI (Intel).
 - These platforms offer debugging tools (e.g., ``cuda-gdb``, ``rocgdb``) and performance analysis tools (e.g., NVIDIA Nsight Systems, NVIDIA Nsight Compute, ``rocprof``, ``roctracer``) to facilitate code optimization and ensure efficient utilization of GPU resources.
 

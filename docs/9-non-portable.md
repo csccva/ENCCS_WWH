@@ -10,7 +10,7 @@ lang:   en
 # CUDA  and HIP 
 
 - CUDA and HIP are  solely focused on GPUs. 
-- They provide  all the necessary tools and advance features to write higly optimized applications for running on GPUs: 
+- CUDAand ROCM toolkits  provide  all the necessary tools and advance features to write higly optimized applications for running on GPUs: 
    - extensive libraries
    - low level APIs
    - compiler toolchains that optimize code execution on NVIDIA GPUs (in the case of CUDA) and both NVIDIA and AMD GPUs (in the case of HIP)
@@ -65,7 +65,7 @@ int main(){
    for (i=0; i < n; i++) {
       Ah[i] = sin(i) * 2.3;
       Bh[i] = cos(i) * 1.1;
-      Cref[i] = Ah[i] + Bh[i];}
+      Cref[i] = Ah[i] + Bh[i];} 
 ```
 </small>
 </div>
@@ -83,7 +83,7 @@ int main(){
    hipMemcpy(Bd, Bh, sizeof(float) * n, hipMemcpyHostToDevice);
    
    // define grid dimensions + launch the device kernel
-   im3 blocks, threads;
+   dim3 blocks, threads;
    threads=dim3(256,1,1);
    blocks=dim3((N+256-1)/256,1,1);
    
@@ -108,6 +108,15 @@ int main(){
 
 <div class="column">
 <small>
+```cpp
+__global__ void vector_add(float *A, float *B, float *C, int n){
+   int tid = threadIdx.x + blockIdx.x * blockDim.x;
+   if(tid<n){
+      C[tid] = A[tid]+B[tid];
+   }
+}
+
+``` 
 ```cpp
 int main(){ 
    const int N = 10000;
@@ -183,6 +192,12 @@ __global__ void vector_add(float *A, float *B, float *C, int n, int stride, int 
 - Local shared memory can be used to improve the memory accesses.
 
 
+# Block of Threads and Local Shared Memory
+
+![](img/BLOCK_SMP.png){.center width=40%}
+
+- <small>Each block is assign to a SMP and it can not be split. </small>
+- <small>Synchronization and data exchange is possible inside a block.</small>
 
 # Optimizing matrix operations. `B(i,j)=A(j,i)` 
 ![](img/transpose_img.png){.center width=60%}

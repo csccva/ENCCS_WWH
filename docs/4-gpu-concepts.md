@@ -129,7 +129,7 @@ GPU_K void ker_axpy_(int n, double a, double *x, double *y, int id)
 <small>
 
 
-NVIDIA/HIP                         OpenCL/SYCL
+CUDA/HIP                           OpenCL/SYCL
 --------------------------------   -----------
 grid of threads                    NDRange
 block                              work-group            
@@ -149,4 +149,4 @@ blockDim.{x,y,z}                   get_local_size({0,1,2})/get_local_range({2,1,
    - <small>Two types of parallelism that can be explored are data parallelism and task parallelism.</small>
    - <small>GPUs are a type of shared memory architecture suitable for data parallelism.</small>
    - <small>GPUs have high parallelism, with threads organized into warps and blocks and.</small>
-   - <small>GPU optimization involves coalesced memory access, shared memory usage, and high thread and warp occupancy. Additionally, architecture-specific features such as warp-level operations and cooperative groups can be leveraged for more efficient processing.</small>
+   - <small>Threads in the same warp should execute the same instruction and access data close to each other memory</small>
