@@ -10,11 +10,22 @@ lang:   en
 # CUDA  and HIP 
 
 - CUDA and HIP are  solely focused on GPUs. 
-- CUDAand ROCM toolkits  provide  all the necessary tools and advance features to write higly optimized applications for running on GPUs: 
-   - extensive libraries
+- CUDA and ROCM toolkits  provide  all the necessary tools and advance features to write higly optimized applications for running on GPUs: 
+   - optimized libraries
    - low level APIs
    - compiler toolchains that optimize code execution on NVIDIA GPUs (in the case of CUDA) and both NVIDIA and AMD GPUs (in the case of HIP)
    - debugging and performance analysis tools
+
+
+# CUDA/HIP programming model
+
+- GPU accelerator is often called a *device* and CPU a *host*
+- The programs are CPU centric
+   - The CPU initializes the device, allocates GPU memory, and initiates the CPU-GPU transfers.
+   - The CPU launches the kernel (parallel code) which is executed on a device by several threads.
+- The kernels are written from the point of view of a single thread
+    - Each thread has a unique ID
+
 
 # Hello World
 

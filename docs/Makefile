@@ -14,5 +14,6 @@ all: $(PDFS)
 	$(SLIDEFACTORY) slides -f pdf --theme $(THEME) $<
 
 # Clean target to remove generated PDF files
+.PHONY: clean 
 clean:
 	rm -f $(PDFS)
