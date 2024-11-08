@@ -17,7 +17,7 @@ lang:   en
    - debugging and performance analysis tools
 
 
-# CUDA/HIP programming model
+# CUDA/HIP Programming Model
 
 - GPU accelerator is often called a *device* and CPU a *host*
 - The programs are CPU centric
