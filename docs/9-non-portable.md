@@ -397,6 +397,6 @@ for (int i = 0; i < n_streams; ++i) {
 - The programmer can take advantage of all GPU features.
 - NVIDIA has a very extensive ecosystem. AMD is catching up.
 - HIP is open source and can be used on both NVIDIA and AMD platforms.
-- They are exclusive for NVIDIDA and AMD GPUs.
+- They are exclusive for NVIDIA and AMD GPUs.
 - Both CUDA and HIP require learning GPU programming concepts.
-- Memory optimizitions are very important.
+- Memory optimizations are very important.
