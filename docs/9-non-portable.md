@@ -362,7 +362,7 @@ __global__ void reduction_one(double x, double *sum, int N){
 
 # CUDA/HIP Streams
 - Modern GPUs can overlap independent operations.
-- CPU-GPU data transfers can be overllapped with lernel execution.
+- CPU-GPU data transfers can be overlapped with kernel execution.
 - **CUDA/HIP streams**  are independent execution units, a sequence of operations that execute in issue-order on the GPU.
 - The operations issue in different streams can be executed concurrently.
 - Utilizing multiple streams, the GPU can avoid idle time, especially for problems with frequent CPU communication or multi-GPU setups.
