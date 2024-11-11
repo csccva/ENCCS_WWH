@@ -37,7 +37,7 @@ lang:   en
 
 # GPU Platforms
 
-- *NVIDIA*, *AMD*, and *Intel* are the major conmpanies which design and produce GPUs for HPC.
+- *NVIDIA*, *AMD*, and *Intel* are the major companies which design and produce GPUs for HPC.
 - GPUs are provided with their own suite **CUDA**, **ROCm**, and respectively **oneAPI**.
     - optimization, differentiation (offering unique features tailored to their devices), vendor lock-in, licensing, and royalty fees
 - Cross-platform APIs such DirectCompute (only for Windows operating system), OpenCL, and SYCL.
