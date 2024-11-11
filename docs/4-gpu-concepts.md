@@ -148,5 +148,5 @@ blockDim.{x,y,z}                   get_local_size({0,1,2})/get_local_range({2,1,
    - <small>Parallel computing can be classified into distributed-memory and shared-memory architectures.</small>
    - <small>Two types of parallelism that can be explored are data parallelism and task parallelism.</small>
    - <small>GPUs are a type of shared memory architecture suitable for data parallelism.</small>
-   - <small>GPUs have high parallelism, with threads organized into warps and blocks and.</small>
+   - <small>GPUs have high parallelism, with threads organized into warps and blocks</small>
    - <small>Threads in the same warp should execute the same instruction and access data close to each other memory</small>
