@@ -201,7 +201,7 @@ do k2 = 1, k2_max
  locdot=0.d0
  do is=1,nsoap
   locdot=locdot+soap(is, i) * soap_rad_der(is, k2) 
- enddo
+ end do
 dot_soap(k2)= locdot
 end do
 ``` 
@@ -231,7 +231,7 @@ do k2 = 1, k2_max
  !omp parallel do reduction(+:locdot)
  do is=1,nsoap
   locdot=locdot+soap(is, i) * soap_rad_der(is, k2) 
- enddo
+ end do
 dot_soap(k2)= locdot
 end do
 ``` 
